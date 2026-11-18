@@ -1,0 +1,37 @@
+{
+  "name": "hair-styler",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "vitest run",
+    "dev:toss": "vite --mode toss --host 127.0.0.1",
+    "build:toss": "tsc -b && vite build --mode toss && ait build",
+    "build:worker": "wrangler deploy --env production --dry-run --outdir dist-worker",
+    "dev:worker": "wrangler dev --env demo"
+  },
+  "dependencies": {
+    "@apps-in-toss/web-framework": "^3.10.0",
+    "@emotion/react": "^11.14.0",
+    "@toss/tds-mobile": "latest",
+    "@toss/tds-mobile-ait": "^2.5.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@apps-in-toss/devtools": "^3.10.0",
+    "@testing-library/react": "latest",
+    "@testing-library/user-event": "latest",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "latest",
+    "jsdom": "latest",
+    "typescript": "~5.9.3",
+    "vite": "latest",
+    "vitest": "latest",
+    "wrangler": "^4.159.0"
+  }
+}
